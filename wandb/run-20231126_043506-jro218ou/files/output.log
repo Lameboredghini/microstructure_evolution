@@ -1,0 +1,13 @@
+model with parameters num: 1434099
+Size anomaly, file should be skipped: img_1.jpg
+Size anomaly, file should be skipped: img_2.jpg
+Size anomaly, file should be skipped: img_3.jpg
+Size anomaly, file should be skipped: img_4.jpg
+Size anomaly, file should be skipped: img_5.jpg
+Size anomaly, file should be skipped: img_6.jpg
+Size anomaly, file should be skipped: img_7.jpg
+Size anomaly, file should be skipped: img_8.jpg
+train dataset created, total frames  8
+train dataset LOADED, train size  301
+valid dataset created and loaded, valid size  0
+start Training...

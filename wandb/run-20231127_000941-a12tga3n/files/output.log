@@ -1,0 +1,46 @@
+model with parameters num: 1434099
+train dataset created, total frames  8
+train dataset LOADED, train size  1
+valid dataset created and loaded, valid size  1
+start Training...
+tot_batches: 1505, samples: 1, batch_ct: 1, example_ct: 1
+tot_batches: 1505, samples: 2, batch_ct: 2, example_ct: 2
+tot_batches: 1505, samples: 3, batch_ct: 3, example_ct: 3
+tot_batches: 1505, samples: 4, batch_ct: 4, example_ct: 4
+tot_batches: 1505, samples: 5, batch_ct: 5, example_ct: 5
+tot_batches: 1505, samples: 6, batch_ct: 6, example_ct: 6
+tot_batches: 1505, samples: 7, batch_ct: 7, example_ct: 7
+tot_batches: 1505, samples: 8, batch_ct: 8, example_ct: 8
+tot_batches: 1505, samples: 9, batch_ct: 9, example_ct: 9
+tot_batches: 1505, samples: 10, batch_ct: 10, example_ct: 10
+tot_batches: 1505, samples: 11, batch_ct: 11, example_ct: 11
+tot_batches: 1505, samples: 12, batch_ct: 12, example_ct: 12
+tot_batches: 1505, samples: 13, batch_ct: 13, example_ct: 13
+tot_batches: 1505, samples: 14, batch_ct: 14, example_ct: 14
+tot_batches: 1505, samples: 15, batch_ct: 15, example_ct: 15
+tot_batches: 1505, samples: 16, batch_ct: 16, example_ct: 16
+tot_batches: 1505, samples: 17, batch_ct: 17, example_ct: 17
+tot_batches: 1505, samples: 18, batch_ct: 18, example_ct: 18
+tot_batches: 1505, samples: 19, batch_ct: 19, example_ct: 19
+tot_batches: 1505, samples: 20, batch_ct: 20, example_ct: 20
+tot_batches: 1505, samples: 21, batch_ct: 21, example_ct: 21
+tot_batches: 1505, samples: 22, batch_ct: 22, example_ct: 22
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x12a7d7ba0>
+Traceback (most recent call last):
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1477, in __del__
+    def __del__(self):
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 31531) is killed by signal: Interrupt: 2.
+Traceback (most recent call last):
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/ms_model_train.py", line 352, in <module>
+    main()
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/ms_model_train.py", line 242, in main
+    loss.backward()
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/wandb_torch.py", line 266, in <lambda>
+    handle = var.register_hook(lambda grad: _callback(grad, log_track))
+KeyboardInterrupt

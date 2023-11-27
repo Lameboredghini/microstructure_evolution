@@ -1,3 +1,6 @@
+# Copyright (c) 2020 NVIDIA Corporation. All rights reserved.
+# This work is licensed under a NVIDIA Open Source Non-commercial license
+
 import torch
 import torch.nn as nn
 from convlstmcell import ConvLSTMCell, ConvTTLSTMCell

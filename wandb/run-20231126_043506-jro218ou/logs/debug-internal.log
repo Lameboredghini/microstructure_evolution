@@ -1,0 +1,70 @@
+2023-11-26 04:35:06,928 INFO    StreamThr :23702 [internal.py:wandb_internal():86] W&B internal server running at pid: 23702, started at: 2023-11-26 04:35:06.925609
+2023-11-26 04:35:06,930 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status
+2023-11-26 04:35:06,934 INFO    WriterThread:23702 [datastore.py:open_for_write():85] open: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_043506-jro218ou/run-jro218ou.wandb
+2023-11-26 04:35:06,935 DEBUG   SenderThread:23702 [sender.py:send():380] send: header
+2023-11-26 04:35:06,959 DEBUG   SenderThread:23702 [sender.py:send():380] send: run
+2023-11-26 04:35:07,746 INFO    SenderThread:23702 [dir_watcher.py:__init__():211] watching files in: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_043506-jro218ou/files
+2023-11-26 04:35:07,746 INFO    SenderThread:23702 [sender.py:_start_run_threads():1124] run started: jro218ou with start time 1700953506.926207
+2023-11-26 04:35:07,764 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: check_version
+2023-11-26 04:35:07,764 DEBUG   SenderThread:23702 [sender.py:send_request():407] send_request: check_version
+2023-11-26 04:35:08,137 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: run_start
+2023-11-26 04:35:08,142 DEBUG   HandlerThread:23702 [system_info.py:__init__():32] System info init
+2023-11-26 04:35:08,142 DEBUG   HandlerThread:23702 [system_info.py:__init__():47] System info init done
+2023-11-26 04:35:08,142 INFO    HandlerThread:23702 [system_monitor.py:start():194] Starting system monitor
+2023-11-26 04:35:08,142 INFO    SystemMonitor:23702 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-26 04:35:08,143 INFO    HandlerThread:23702 [system_monitor.py:probe():214] Collecting system info
+2023-11-26 04:35:08,143 INFO    SystemMonitor:23702 [interfaces.py:start():190] Started cpu monitoring
+2023-11-26 04:35:08,143 DEBUG   HandlerThread:23702 [system_info.py:probe():196] Probing system
+2023-11-26 04:35:08,145 INFO    SystemMonitor:23702 [interfaces.py:start():190] Started disk monitoring
+2023-11-26 04:35:08,146 INFO    SystemMonitor:23702 [interfaces.py:start():190] Started gpuapple monitoring
+2023-11-26 04:35:08,147 INFO    SystemMonitor:23702 [interfaces.py:start():190] Started memory monitoring
+2023-11-26 04:35:08,148 INFO    SystemMonitor:23702 [interfaces.py:start():190] Started network monitoring
+2023-11-26 04:35:08,152 DEBUG   HandlerThread:23702 [system_info.py:_probe_git():181] Probing git
+2023-11-26 04:35:08,175 DEBUG   HandlerThread:23702 [system_info.py:_probe_git():189] Probing git done
+2023-11-26 04:35:08,175 DEBUG   HandlerThread:23702 [system_info.py:probe():244] Probing system done
+2023-11-26 04:35:08,175 DEBUG   HandlerThread:23702 [system_monitor.py:probe():223] {'os': 'macOS-14.0-arm64-arm-64bit', 'python': '3.11.6', 'heartbeatAt': '2023-11-25T23:05:08.143891', 'startedAt': '2023-11-25T23:05:06.911654', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/ms_model_train.py', 'codePathLocal': 'ms_model_train.py', 'codePath': 'ms_model_train.py', 'git': {'remote': 'https://github.com/Mooon/learning_microstructure_evolution', 'commit': '5cf24c1cc8b4ed298beec24c93ed010cb9b43fb4'}, 'email': 'msm19b031@iiitdm.ac.in', 'root': '/Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution', 'host': 'Divyams-MacBook-Pro.local', 'username': 'divyamyadav', 'executable': '/Users/divyamyadav/Desktop/Learning/ml/env/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 228.27386474609375, 'used': 12.439521789550781}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 8.0}}
+2023-11-26 04:35:08,175 INFO    HandlerThread:23702 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-26 04:35:08,175 INFO    HandlerThread:23702 [system_monitor.py:probe():227] Publishing system info
+2023-11-26 04:35:08,175 DEBUG   HandlerThread:23702 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-26 04:35:08,176 DEBUG   HandlerThread:23702 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-26 04:35:08,176 INFO    HandlerThread:23702 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-26 04:35:08,179 DEBUG   SenderThread:23702 [sender.py:send():380] send: files
+2023-11-26 04:35:08,179 INFO    SenderThread:23702 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-26 04:35:08,183 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-26 04:35:08,183 DEBUG   SenderThread:23702 [sender.py:send_request():407] send_request: stop_status
+2023-11-26 04:35:08,184 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-26 04:35:08,529 DEBUG   SenderThread:23702 [sender.py:send():380] send: telemetry
+2023-11-26 04:35:08,531 DEBUG   SenderThread:23702 [sender.py:send():380] send: telemetry
+2023-11-26 04:35:08,753 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_043506-jro218ou/files/wandb-metadata.json
+2023-11-26 04:35:08,753 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_043506-jro218ou/files/requirements.txt
+2023-11-26 04:35:08,753 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_043506-jro218ou/files/output.log
+2023-11-26 04:35:09,457 INFO    wandb-upload_0:23702 [upload_job.py:push():131] Uploaded file /var/folders/db/459yw7nj2630g3kqjbysq6rc0000gn/T/tmpicp0eiwvwandb/povi4cfy-wandb-metadata.json
+2023-11-26 04:35:10,761 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_043506-jro218ou/files/output.log
+2023-11-26 04:35:12,555 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:12,774 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_043506-jro218ou/files/output.log
+2023-11-26 04:35:17,579 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:22,619 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:23,281 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-26 04:35:23,284 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-26 04:35:23,290 DEBUG   SenderThread:23702 [sender.py:send_request():407] send_request: stop_status
+2023-11-26 04:35:27,719 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:32,738 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:37,757 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:38,209 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-26 04:35:38,210 DEBUG   SenderThread:23702 [sender.py:send_request():407] send_request: stop_status
+2023-11-26 04:35:38,223 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-26 04:35:38,927 INFO    Thread-12 :23702 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_043506-jro218ou/files/config.yaml
+2023-11-26 04:35:43,596 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:48,614 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:53,212 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-26 04:35:53,212 DEBUG   SenderThread:23702 [sender.py:send_request():407] send_request: stop_status
+2023-11-26 04:35:53,225 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-26 04:35:54,528 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:35:59,548 DEBUG   HandlerThread:23702 [handler.py:handle_request():146] handle_request: status_report
+2023-11-26 04:36:00,314 INFO    memory    :23702 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2023-11-26 04:36:00,318 DEBUG   SystemMonitor:23702 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-26 04:36:00,319 DEBUG   SystemMonitor:23702 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-26 04:36:00,319 DEBUG   SystemMonitor:23702 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-26 04:36:00,338 DEBUG   SenderThread:23702 [sender.py:send():380] send: telemetry
+2023-11-26 04:36:00,338 DEBUG   SenderThread:23702 [sender.py:send():380] send: stats
+2023-11-26 04:36:02,430 INFO    MainThread:23702 [internal.py:handle_exit():76] Internal process exited

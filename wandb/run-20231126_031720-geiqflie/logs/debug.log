@@ -1,0 +1,28 @@
+2023-11-26 03:17:20,534 INFO    MainThread:18792 [wandb_setup.py:_flush():76] Current SDK version is 0.16.0
+2023-11-26 03:17:20,534 INFO    MainThread:18792 [wandb_setup.py:_flush():76] Configure stats pid to 18792
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_setup.py:_flush():76] Loading settings from /Users/divyamyadav/.config/wandb/settings
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_setup.py:_flush():76] Loading settings from /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/settings
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'ms_model_train.py', 'program_abspath': '/Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/ms_model_train.py', 'program': '/Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/ms_model_train.py'}
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_init.py:_log_setup():524] Logging user logs to /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_031720-geiqflie/logs/debug.log
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_init.py:_log_setup():525] Logging internal logs to /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_031720-geiqflie/logs/debug-internal.log
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_init.py:init():564] calling init triggers
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'epochs': 5, 'batch_size': 1, 'learning_rate': 0.001, 'model_order': 3, 'model_steps': 3, 'model_rank': 8, 'kernel': 3, 'total_frames': 8}
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_init.py:init():614] starting backend
+2023-11-26 03:17:20,535 INFO    MainThread:18792 [wandb_init.py:init():618] setting up manager
+2023-11-26 03:17:20,541 INFO    MainThread:18792 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2023-11-26 03:17:20,543 INFO    MainThread:18792 [wandb_init.py:init():624] backend started and connected
+2023-11-26 03:17:20,550 INFO    MainThread:18792 [wandb_init.py:init():716] updated telemetry
+2023-11-26 03:17:20,567 INFO    MainThread:18792 [wandb_init.py:init():749] communicating run to backend with 90.0 second timeout
+2023-11-26 03:17:21,239 ERROR   MainThread:18792 [wandb_init.py:init():775] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2023-11-26 03:17:21,521 ERROR   MainThread:18792 [wandb_init.py:init():1184] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+Traceback (most recent call last):
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 1166, in init
+    run = wi.init()
+          ^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 781, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2023-11-26 03:17:22,526 WARNING MsgRouterThr:18792 [router.py:message_loop():77] message_loop has been closed

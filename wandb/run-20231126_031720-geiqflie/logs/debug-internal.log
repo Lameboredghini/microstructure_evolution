@@ -1,0 +1,59 @@
+2023-11-26 03:17:20,543 INFO    StreamThr :18802 [internal.py:wandb_internal():86] W&B internal server running at pid: 18802, started at: 2023-11-26 03:17:20.542261
+2023-11-26 03:17:20,544 DEBUG   HandlerThread:18802 [handler.py:handle_request():146] handle_request: status
+2023-11-26 03:17:20,551 INFO    WriterThread:18802 [datastore.py:open_for_write():85] open: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_031720-geiqflie/run-geiqflie.wandb
+2023-11-26 03:17:20,551 DEBUG   SenderThread:18802 [sender.py:send():380] send: header
+2023-11-26 03:17:20,568 DEBUG   SenderThread:18802 [sender.py:send():380] send: run
+2023-11-26 03:17:21,231 ERROR   SenderThread:18802 [internal_api.py:execute():370] 404 response executing GraphQL.
+2023-11-26 03:17:21,231 ERROR   SenderThread:18802 [internal_api.py:execute():371] {"errors":[{"message":"project not found","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2023-11-26 03:17:21,232 ERROR   SenderThread:18802 [sender.py:send_run():979] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+Traceback (most recent call last):
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/internal/sender.py", line 977, in send_run
+    self._init_run(run, config_value_dict)
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/internal/sender.py", line 1015, in _init_run
+    server_run, inserted, server_messages = self._api.upsert_run(
+                                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 2008, in upsert_run
+    response = self.gql(
+               ^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 338, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/util.py", line 965, in check_retry_fn
+    return fallback_retry_fn(e)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/divyamyadav/Desktop/Learning/ml/env/lib/python3.11/site-packages/wandb/util.py", line 907, in no_retry_auth
+    raise CommError(
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2023-11-26 03:17:21,525 DEBUG   HandlerThread:18802 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-26 03:17:21,525 INFO    HandlerThread:18802 [handler.py:finish():866] shutting down handler
+2023-11-26 03:17:21,573 INFO    WriterThread:18802 [datastore.py:close():294] close: /Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/wandb/run-20231126_031720-geiqflie/run-geiqflie.wandb
+2023-11-26 03:17:22,244 INFO    SenderThread:18802 [sender.py:finish():1536] shutting down sender

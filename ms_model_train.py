@@ -1,5 +1,10 @@
 #!/bin/env python
 
+"""
+Main function to train the model based on the MS dataset
+Author: Monica Rotulo
+"""
+
 # system modules
 from pathlib import Path
 import os, platform, argparse
@@ -154,7 +159,7 @@ def main():
         #pin_memory=True
     )
 
-    train_size = len(train_dataloader) * batch_size
+    train_size = 1 * batch_size
     
     print("train dataset LOADED, train size ", train_size)
 
@@ -176,7 +181,7 @@ def main():
         num_workers=2 * max(num_gpus, 1),
         #pin_memory=True
     ) 
-    valid_size = len(valid_dataloader) * batch_size
+    valid_size = 1 * batch_size
 
     print("valid dataset created and loaded, valid size ", valid_size)
 

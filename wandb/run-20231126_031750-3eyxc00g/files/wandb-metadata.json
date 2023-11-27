@@ -1,0 +1,37 @@
+{
+    "os": "macOS-14.0-arm64-arm-64bit",
+    "python": "3.11.6",
+    "heartbeatAt": "2023-11-25T21:47:51.383692",
+    "startedAt": "2023-11-25T21:47:50.444982",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution/ms_model_train.py",
+    "codePathLocal": "ms_model_train.py",
+    "codePath": "ms_model_train.py",
+    "git": {
+        "remote": "https://github.com/Mooon/learning_microstructure_evolution",
+        "commit": "5cf24c1cc8b4ed298beec24c93ed010cb9b43fb4"
+    },
+    "email": "msm19b031@iiitdm.ac.in",
+    "root": "/Users/divyamyadav/Desktop/Learning/ml/env/learning_microstructure_evolution",
+    "host": "Divyams-MacBook-Pro.local",
+    "username": "divyamyadav",
+    "executable": "/Users/divyamyadav/Desktop/Learning/ml/env/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 228.27386474609375,
+            "used": 12.439521789550781
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 8.0
+    }
+}

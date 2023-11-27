@@ -1,3 +1,7 @@
+"""
+Dataloder for the microstructure dataset
+Author: Santosh Dangi
+"""
 
 import os, glob
 from os.path import exists
@@ -29,9 +33,17 @@ class Video(object):
     def path(self): #-> str:
         return self._path
 
+    # @property
+    # def start_frame(self): #-> int:
+    #     return int(self._data[1])
     @property
-    def start_frame(self): #-> int:
-        return int(self._data[1])
+    def start_frame(self):
+        if len(self._data) >= 2:
+            return int(self._data[1])
+        else:
+            print(f"Error: _data has insufficient elements. _data: {self._data}")
+            return -1  # or some default value indicating an error
+
 
     @property
     def end_frame(self): #-> int:
@@ -66,6 +78,7 @@ class MicroS_Dataset(Dataset):
 
 
     def __getitem__(self, idx):
+        print("Processing index:", idx)
         """
           Loads the frames of a video at the corresponding indices.
           Args:
@@ -78,21 +91,30 @@ class MicroS_Dataset(Dataset):
               Aim to return video = (frames_in, frames_out), where frames_out are my label
           """
         sample: Video = self.video_list[idx]
+        print(f"Video object: {sample}")
+        print(f"Start frame: {sample.start_frame}")
+        print(f"End frame: {sample.end_frame}")
+
+
   
         # load input frames
         tot_frames = []
         input_frames = []
         output_frames = []
+        print('sample', sample)
         frame_idx = int(sample.start_frame)
+        print(f"ffggg")
 
         for _ in range(self.n_frames_total):
-          file_exists = exists(os.path.join(sample.path, self.imagefile_template.format(frame_idx)))  
+          print(f"Processing frame: {frame_idx}")
+          file_exists = exists(os.path.join(sample.path, self.imagefile_template.format(frame_idx)))
+          print(f"File exists: {file_exists}")
           if not file_exists:
               print("file do not exist!", os.path.join(sample.path, self.imagefile_template.format(frame_idx)))
           else:
             image = Image.open(os.path.join(sample.path, self.imagefile_template.format(frame_idx))).convert('RGB')
             # settings based on the used dataset:
-            if image.size[0] == 1520:
+            if image.size[0] == 1920:
                 image = image.crop((477, 113, 1043, 680))
                 half = 0.319
                 image = image.resize( [int(half * s) for s in image.size] )
@@ -101,14 +123,18 @@ class MicroS_Dataset(Dataset):
                 half = 0.5
                 image = image.resize( [int(half * s) for s in image.size] )
             else:
-                print('Size anomaly, file should be skipped:', self.imagefile_template.format(frame_idx))
+                print('Size anomaly, file should be skipped:', self.imagefile_template.format(frame_idx), {image.size[0]})
 
             tot_frames.append(image)
 
             if frame_idx < sample.end_frame:
                 frame_idx += 1
+            else:
+                print ('break with frame_idx < sample.end_frame',frame_idx , '<', sample.end_frame )
+                break 
 
-
+        print("Sample:", sample)
+        print("self._data:", sample._data)
         if self.transform is not None:
             tot_frames = self.transform(tot_frames)
         
